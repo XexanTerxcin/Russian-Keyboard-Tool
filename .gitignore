@@ -1,0 +1,12 @@
+# Build output
+/target
+/dist
+
+# Packages
+*.deb
+
+# Editor and OS clutter
+.idea/
+.vscode/
+*.swp
+.DS_Store

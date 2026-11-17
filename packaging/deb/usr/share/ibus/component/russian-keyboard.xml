@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component>
+    <name>org.freedesktop.IBus.RussianKeyboard</name>
+    <description>Russian Keyboard Tool</description>
+    <exec>/usr/bin/russian-keyboard-engine --ibus</exec>
+    <version>1.0.0</version>
+    <author>Xexan Terxcin</author>
+    <license>MIT</license>
+    <homepage>https://github.com/XexanTerxcin/Russian-Keyboard-Tool</homepage>
+    <textdomain>russian-keyboard-tool</textdomain>
+    <engines>
+        <engine>
+            <name>RussianKeyboard</name>
+            <language>ru</language>
+            <license>MIT</license>
+            <author>Xexan Terxcin</author>
+            <icon>/usr/share/pixmaps/russian-keyboard-tool.png</icon>
+            <layout>us</layout>
+            <longname>Russian Keyboard</longname>
+            <description>Russian phonetic transliteration input method</description>
+            <rank>99</rank>
+        </engine>
+    </engines>
+</component>

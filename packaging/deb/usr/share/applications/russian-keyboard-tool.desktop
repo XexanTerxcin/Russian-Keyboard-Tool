@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Russian Keyboard Tool
+GenericName=Russian Input Method
+Comment=Type Russian Cyrillic phonetically with your QWERTY keyboard
+Exec=/usr/bin/russian-keyboard-tool
+Icon=russian-keyboard-tool
+Terminal=false
+Type=Application
+Categories=Utility;Accessibility;
+Keywords=keyboard;russian;transliteration;phonetic;ibus;cyrillic;
+StartupNotify=true

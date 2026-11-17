@@ -1,0 +1,29 @@
+#!/bin/sh
+set -e
+
+# Refresh the system-wide IBus component cache and desktop caches. The user
+# cache (ibus write-cache, without --system) is refreshed by
+# `russian-keyboard-setup` or automatically on the next login.
+if command -v ibus >/dev/null 2>&1; then
+    ibus write-cache --system >/dev/null 2>&1 || true
+fi
+
+if command -v gtk-update-icon-cache >/dev/null 2>&1; then
+    gtk-update-icon-cache -f /usr/share/icons/hicolor >/dev/null 2>&1 || true
+fi
+
+if command -v update-desktop-database >/dev/null 2>&1; then
+    update-desktop-database -q /usr/share/applications >/dev/null 2>&1 || true
+fi
+
+cat <<'EOF'
+Russian Keyboard Tool has been installed.
+
+To finish setup:
+  1. Run `ibus restart` once (or log out and back in) so ibus-daemon loads
+     the new input method.
+  2. Open IBus Preferences -> Input Method -> Add -> "Russian - Russian Keyboard".
+  3. Press Meta+R to switch between English and Russian in any application.
+EOF
+
+exit 0

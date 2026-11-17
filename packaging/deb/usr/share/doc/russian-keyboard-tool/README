@@ -1,0 +1,20 @@
+Russian Keyboard Tool
+
+A system-wide IBus input method for Russian phonetic transliteration.
+Type English QWERTY sequences and get Russian Cyrillic.
+
+Setup after installation:
+  1. Ensure IBus is your active input method framework.
+  2. Run: russian-keyboard-setup
+  3. Restart IBus once: ibus restart
+  4. Add "Russian - Russian Keyboard" in IBus Preferences.
+  5. Press Meta+R to toggle Russian input mode.
+
+Examples:
+  privet   -> привет
+  khorosho -> хорошо
+  zhizn    -> жизнь
+  shchuka  -> щука
+
+Documentation and source code:
+  https://github.com/XexanTerxcin/Russian-Keyboard-Tool

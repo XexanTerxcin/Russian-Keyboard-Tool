@@ -1,0 +1,27 @@
+#!/bin/sh
+set -e
+
+echo "Russian Keyboard Tool - per-user setup"
+echo
+
+if ! command -v ibus >/dev/null 2>&1; then
+    echo "IBus is not installed. Install it first: sudo apt install ibus"
+    exit 1
+fi
+
+ibus write-cache >/dev/null 2>&1 || true
+echo "  * IBus component cache refreshed for $(id -un)."
+
+if pgrep -x ibus-daemon >/dev/null 2>&1; then
+    echo "  * ibus-daemon is running (PID $(pgrep -x ibus-daemon | head -n 1))."
+else
+    echo "  * ibus-daemon is not running; it will be started on your next login."
+fi
+
+cat <<'EOF'
+
+Next steps:
+  1. Run `ibus restart` once so the engine appears in IBus Preferences.
+  2. Open IBus Preferences -> Input Method -> Add -> "Russian - Russian Keyboard".
+  3. Press Meta+R to switch between English and Russian in any application.
+EOF

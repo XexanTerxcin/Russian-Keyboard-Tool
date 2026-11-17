@@ -1,0 +1,16 @@
+Package: russian-keyboard-tool
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: @ARCH@
+Depends: ibus (>= 1.5), libc6 (>= 2.34), libgl1, libx11-6, libxkbcommon0
+Maintainer: Xexan Terxcin <xexanterxcin@users.noreply.github.com>
+Homepage: https://github.com/XexanTerxcin/Russian-Keyboard-Tool
+Description: system-wide Russian phonetic transliteration keyboard
+ Russian Keyboard Tool is an IBus input method that lets you type Russian
+ Cyrillic with an ordinary English QWERTY keyboard using phonetic
+ transliteration (privet -> привет, khorosho -> хорошо).
+ .
+ It ships a lightweight top-bar controller, a virtual keyboard view, a
+ settings window and a system tray icon. Press Meta+R anywhere to toggle
+ between English and Russian.

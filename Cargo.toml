@@ -1,0 +1,37 @@
+[package]
+name = "russian-keyboard-tool"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.81"
+authors = ["Xexan Terxcin"]
+description = "System-wide Russian phonetic transliteration keyboard for Linux, built on IBus"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/XexanTerxcin/Russian-Keyboard-Tool"
+keywords = ["ibus", "russian", "transliteration", "keyboard", "input-method"]
+categories = ["gui", "internationalization"]
+
+[lib]
+name = "russian_keyboard_tool"
+path = "src/lib.rs"
+
+[[bin]]
+name = "russian-keyboard-tool"
+path = "src/bin/gui.rs"
+
+[[bin]]
+name = "russian-keyboard-engine"
+path = "src/bin/engine.rs"
+
+[dependencies]
+ibus-engine = "0.3"
+zbus = "5"
+tokio = { version = "1", features = ["full"] }
+log = "0.4"
+env_logger = "0.11"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+x11rb = "0.14"
+ksni = "0.3"
+image = { version = "0.25", default-features = false, features = ["png"] }
+eframe = { version = "0.31", default-features = false, features = ["default_fonts", "glow", "x11"] }
